@@ -1,15 +1,15 @@
 {
-  "name": "skills-kit",
+  "name": "skills",
   "owner": {
     "name": "Skills Kit Team",
     "email": "wave@nibzard.com",
-    "url": "https://github.com/nibzard/skills-kit"
+    "url": "https://github.com/nibzard/skills"
   },
   "metadata": {
-    "description": "A comprehensive marketplace for Claude Code Agent Skills with curated collections for development, data analysis, productivity, and security workflows",
+    "description": "An opinionated collection of Claude Code Agent Skills for development, data analysis, productivity, and security workflows",
     "version": "1.0.1",
-    "homepage": "https://github.com/nibzard/skills-kit",
-    "repository": "https://github.com/nibzard/skills-kit",
+    "homepage": "https://github.com/nibzard/skills",
+    "repository": "https://github.com/nibzard/skills",
     "license": "MIT",
     "keywords": [
       "skills",

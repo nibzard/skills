@@ -1,6 +1,6 @@
 # Marketplace Management Guide
 
-Note: This repository ships as a plugin marketplace. The guidance below describes marketplace distribution generally; for this repo’s current installation, see the root README and use `/plugin marketplace add nibzard/skills-kit`.
+Note: This repository ships as a plugin marketplace. The guidance below describes marketplace distribution generally; for this repo’s current installation, see the root README and use `/plugin marketplace add nibzard/skills`.
 
 This comprehensive guide covers how to create, manage, and distribute skills marketplaces for Claude Code. Learn how to set up marketplaces for teams, organizations, and public communities.
 

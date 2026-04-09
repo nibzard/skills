@@ -1,0 +1,23 @@
+{
+  "skill_name": "git-xray",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I just joined this team and inherited this repo. Before I start reading the code, can you give me a health check on this codebase? I want to know where the problem areas are and what I should look at first.",
+      "expected_output": "A structured report covering churn hotspots, contributor landscape, bug clusters, project momentum, firefighting frequency, and a recommended reading order.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "We're thinking about acquiring a company and I need to do due diligence on their main repo. Can you assess the technical debt and bus factor risk in this project?",
+      "expected_output": "A diagnostic report that specifically highlights bus factor risks, high-churn files that also have bug clusters, and an assessment of whether the project is accelerating or declining.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I keep getting paged for this service and I don't know where to start. What are the riskiest files in this repo? Where do bugs keep showing up?",
+      "expected_output": "A report that cross-references churn and bug data to identify the highest-risk files, checks revert/hotfix frequency, and gives a prioritized list of files to investigate.",
+      "files": []
+    }
+  ]
+}

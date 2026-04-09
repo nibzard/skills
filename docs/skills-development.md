@@ -1,6 +1,6 @@
 # Skills Development Guide
 
-Note: This repository is distributed as a single plugin bundling multiple Skills. Marketplace examples in this document are general; for this repo install via `/plugin install nibzard/skills-kit`.
+Note: This repository is distributed as a single plugin bundling multiple Skills. Marketplace examples in this document are general; for this repo install via `/plugin install nibzard/skills`.
 
 This comprehensive guide covers how to create, test, and distribute Agent Skills for Claude Code. Learn best practices for skill development, testing strategies, and deployment workflows.
 

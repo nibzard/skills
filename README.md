@@ -10,10 +10,10 @@ Not a marketplace—a toolkit. These are skills I've built and curated for my ow
 
 ```bash
 # Add the kit
-/plugin marketplace add nibzard/skills-kit
+/plugin marketplace add nibzard/skills
 
 # Install a skill
-/plugin install yt-transcript@skills-kit
+/plugin install yt-transcript@skills
 ```
 
 ---
@@ -66,19 +66,19 @@ If you're looking for a public marketplace with community contributions, this is
 
 ### Install the Kit
 ```bash
-/plugin marketplace add nibzard/skills-kit
+/plugin marketplace add nibzard/skills
 ```
 
 ### Install Individual Skills
 ```bash
 # YouTube transcripts
-/plugin install yt-transcript@skills-kit
+/plugin install yt-transcript@skills
 
 # Publish conversations
-/plugin install claude-thread-publisher@skills-kit
+/plugin install claude-thread-publisher@skills
 
 # Run releases
-/plugin install release-runbook@skills-kit
+/plugin install release-runbook@skills
 ```
 
 ### Install Everything
@@ -86,11 +86,11 @@ If you're looking for a public marketplace with community contributions, this is
 // .claude/settings.json
 {
   "enabledPlugins": [
-    "marimo@skills-kit",
-    "yt-transcript@skills-kit",
-    "claude-thread-publisher@skills-kit",
-    "tmux@skills-kit",
-    "release-runbook@skills-kit"
+    "marimo@skills",
+    "yt-transcript@skills",
+    "claude-thread-publisher@skills",
+    "tmux@skills",
+    "release-runbook@skills"
   ]
 }
 ```
@@ -112,7 +112,7 @@ Before contributing, check that your skill isn't better suited as a standalone p
 ## Structure
 
 ```
-skills-kit/
+skills/
 ├── .claude-plugin/
 │   └── marketplace.json       # Kit manifest
 ├── skills/
@@ -156,4 +156,4 @@ MIT — see [LICENSE](LICENSE). Individual skills may have their own licenses.
 
 ---
 
-**[nibzard](https://github.com/nibzard)** · [Issues](https://github.com/nibzard/skills-kit/issues) · [Discussion](https://github.com/nibzard/skills-kit/discussions)
+**[nibzard](https://github.com/nibzard)** · [Issues](https://github.com/nibzard/skills/issues) · [Discussion](https://github.com/nibzard/skills/discussions)
