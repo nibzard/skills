@@ -97,6 +97,45 @@ If you're looking for a public marketplace with community contributions, this is
 
 ---
 
+## Installing with skillctl
+
+[skillctl](https://github.com/nibzard/skillctl) is a local-first skill manager that projects skills into the roots multiple agent runtimes actually read (Claude Code, Codex, Gemini CLI, Copilot, Amp, OpenCode). One tool, every runtime.
+
+### Install skillctl
+
+```bash
+curl -fsSL https://github.com/nibzard/skillctl/releases/latest/download/skillctl-install.sh | sh
+```
+
+### Install a skill from this repo
+
+```bash
+# Initialize skillctl in your workspace
+skillctl init
+
+# Install a skill
+skillctl install https://github.com/nibzard/skills --name yt-transcript --subpath skills/yt-transcript
+
+# Project into runtime roots
+skillctl sync
+```
+
+### Manage installed skills
+
+```bash
+skillctl list              # what's installed and where it projects
+skillctl update yt-transcript   # pull upstream changes
+skillctl explain yt-transcript  # why a skill is active or shadowed
+skillctl doctor            # diagnose drift, conflicts, missing projections
+skillctl override yt-transcript # customize without forking
+skillctl fork yt-transcript    # take full local ownership
+skillctl remove yt-transcript  # uninstall
+```
+
+See the [skillctl README](https://github.com/nibzard/skillctl) for the full command reference.
+
+---
+
 ## Contributing
 
 This is a personal toolkit, but I accept quality PRs that align with the collection's scope:
