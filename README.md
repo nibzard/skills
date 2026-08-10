@@ -24,6 +24,7 @@ Not a marketplace—a toolkit. These are skills I've built and curated for my ow
 | Skill | What it does |
 |-------|--------------|
 | **[marimo](skills/marimo/)** | Reactive Python notebooks for data analysis, dashboards, and interactive apps |
+| **[steel-org-recon](skills/steel-org-recon/)** | Reconstruct what a Steel customer org was doing in its browser sessions and whether it succeeded, from warehouse records plus raw session logs |
 
 ### Media & Content
 | Skill | What it does |
@@ -162,7 +163,8 @@ skills/
 │   ├── release-runbook/       # Release automation
 │   ├── skill-creator/         # Skill scaffolding
 │   ├── pentest-toolkit/       # Security tools
-│   └── brand-illustrator/     # Illustration generation
+│   ├── brand-illustrator/     # Illustration generation
+│   └── steel-org-recon/       # Steel session forensics & outcomes
 ├── docs/                      # Additional docs
 └── README.md
 ```

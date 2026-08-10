@@ -294,6 +294,37 @@
         "productivity"
       ],
       "strict": true
+    },
+    {
+      "name": "steel-org-recon",
+      "source": "./skills/steel-org-recon",
+      "description": "Reconstruct what a Steel customer organization was doing in its browser sessions, and whether it succeeded, from warehouse records plus raw session logs in object storage. Use when given a Steel organization id and asked what that org was building, why its sessions failed, or why it looks unhealthy.",
+      "version": "1.0.0",
+      "author": {
+        "name": "nibzard",
+        "email": "nibzard@github.com"
+      },
+      "homepage": "https://nibzard.com/skills/steel-org-recon",
+      "license": "MIT",
+      "keywords": [
+        "steel",
+        "browser-sessions",
+        "forensics",
+        "warehouse",
+        "customer-analysis",
+        "session-outcomes"
+      ],
+      "category": "data-analytics",
+      "tags": [
+        "steel",
+        "sessions",
+        "forensics",
+        "analysis",
+        "warehouse",
+        "logs",
+        "data-science"
+      ],
+      "strict": true
     }
   ]
 }
