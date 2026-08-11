@@ -1,0 +1,11 @@
+{
+  "name": "antinote",
+  "version": "1.0.0",
+  "description": "Send notes, task lists, summaries, and snippets to Antinote (a local macOS scratchpad) via URL schemes, and format content to use Antinote's keyword features. Use when the user wants to add, append, overwrite, or push text to Antinote, mentions Antinote or their scratchpad, or wants quick capture to a local temporary note.",
+  "homepage": "https://nibzard.com/skills/antinote",
+  "license": "MIT",
+  "author": {
+    "name": "nibzard",
+    "email": "nibzard@github.com"
+  }
+}

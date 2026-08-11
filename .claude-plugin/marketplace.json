@@ -325,6 +325,38 @@
         "data-science"
       ],
       "strict": true
+    },
+    {
+      "name": "antinote",
+      "source": "./skills/antinote",
+      "description": "Send notes, task lists, summaries, and snippets to Antinote (a local macOS scratchpad) via URL schemes, and format content to use Antinote's keyword features. Use when the user wants to add, append, overwrite, or push text to Antinote, mentions Antinote or their scratchpad, or wants quick capture to a local temporary note.",
+      "version": "1.0.0",
+      "author": {
+        "name": "nibzard",
+        "email": "nibzard@github.com"
+      },
+      "homepage": "https://nibzard.com/skills/antinote",
+      "license": "MIT",
+      "keywords": [
+        "antinote",
+        "notes",
+        "scratchpad",
+        "url-scheme",
+        "macos",
+        "quick-capture",
+        "automation"
+      ],
+      "category": "productivity",
+      "tags": [
+        "antinote",
+        "notes",
+        "scratchpad",
+        "macos",
+        "url-scheme",
+        "productivity",
+        "quick-capture"
+      ],
+      "strict": true
     }
   ]
 }
