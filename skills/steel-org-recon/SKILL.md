@@ -16,6 +16,10 @@ description: >-
 
 # Steel org recon
 
+Resolve `SKILL_DIR` to the absolute directory containing this loaded `SKILL.md`.
+Use that path for bundled helpers; keep the target project as the working directory.
+
+
 Reconstruct one organization's real behaviour from evidence, not from status columns.
 
 **Invocation:** `/steel-org-recon <org_id>` — or any request naming an org id.
@@ -54,7 +58,7 @@ Skipping ahead to the traces is how you end up inventing a narrative and then de
 ### Phase 1 — Identity and coverage
 
 ```sh
-.claude/skills/steel-org-recon/scripts/profile-org.sh <org_id>
+${SKILL_DIR}/scripts/profile-org.sh <org_id>
 ```
 
 One command gives you the org record, members, signup questionnaire, projects, per-day session
@@ -81,7 +85,7 @@ the org does not exist — compare `max(created_at)` against the session dates.
 ### Phase 2 — Cache the logs locally
 
 ```sh
-.claude/skills/steel-org-recon/scripts/cache-logs.sh <org_id> [max_sessions]
+${SKILL_DIR}/scripts/cache-logs.sh <org_id> [max_sessions]
 ```
 
 This copies the org's session events into a local DuckDB file so every later query is instant
@@ -94,7 +98,7 @@ that you sampled, and how.
 ### Phase 3 — Learn the schema, do not guess it
 
 ```sh
-.claude/skills/steel-org-recon/scripts/dump-trace.sh <db_path> --schema
+${SKILL_DIR}/scripts/dump-trace.sh <db_path> --schema
 ```
 
 This enumerates the JSON keys actually present under each `event_type`. Guessing JSON paths
@@ -105,7 +109,7 @@ you will normally see.
 ### Phase 4 — Read the flat trace
 
 ```sh
-.claude/skills/steel-org-recon/scripts/dump-trace.sh <db_path> > trace.txt
+${SKILL_DIR}/scripts/dump-trace.sh <db_path> > trace.txt
 ```
 
 One line per meaningful action, sorted by session and time:
@@ -125,7 +129,7 @@ party sizes, and search terms are usually right there in the query string.
 ### Phase 5 — Forensics battery
 
 ```sh
-.claude/skills/steel-org-recon/scripts/forensics.sh <db_path>
+${SKILL_DIR}/scripts/forensics.sh <db_path>
 ```
 
 Prints the standard evidence set: per-session overview, injected-extension noise split, non-2xx

@@ -176,10 +176,10 @@ This skill includes helper scripts for complex operations:
 
 ```bash
 # Validate input
-python scripts/validate.py input.txt
+python3 scripts/validate.py input.txt
 
 # Transform data
-python scripts/transform.py input.csv output.json
+python3 scripts/transform.py input.csv output.json
 ```
 ```
 

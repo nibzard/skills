@@ -62,7 +62,7 @@ Marimo notebooks eliminate hidden state through reactive execution:
 - **Deployable**: Can be run as interactive web applications
 
 ### Basic Structure
-```python
+```python3
 import marimo
 import numpy as np
 
@@ -127,7 +127,7 @@ Use the bundled snippets library for ready-to-use patterns.
 ## Code Patterns Library
 
 ### Available Patterns
-```python
+```python3
 from snippets.patterns import MarimoPatterns
 
 # Get basic app structure

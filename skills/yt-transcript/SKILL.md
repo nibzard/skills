@@ -9,6 +9,10 @@ allowed-tools:
 
 # YouTube Transcript Skill
 
+Resolve `SKILL_DIR` to the absolute directory containing this loaded `SKILL.md`.
+Use that path for bundled helpers; keep the target project as the working directory.
+
+
 Fetch transcripts from YouTube videos for analysis, summarization, or content processing.
 
 ## When This Skill Activates
@@ -40,19 +44,19 @@ uv pip install youtube-transcript-api
 Fetch a single transcript (outputs to stdout):
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/dQw4w9WgXcQ"
+python3 ${SKILL_DIR}/scripts/get_transcript.py "https://youtu.be/dQw4w9WgXcQ"
 ```
 
 Save to file:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/dQw4w9WgXcQ" --output transcript.txt
+python3 ${SKILL_DIR}/scripts/get_transcript.py "https://youtu.be/dQw4w9WgXcQ" --output transcript.txt
 ```
 
 Fetch multiple videos:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py \
+python3 ${SKILL_DIR}/scripts/get_transcript.py \
   "https://youtu.be/VIDEO_ID_1" \
   "https://youtu.be/VIDEO_ID_2" \
   --output transcripts.txt
@@ -61,7 +65,7 @@ python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py \
 Get transcript without timestamps:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/dQw4w9WgXcQ" --no-timestamps
+python3 ${SKILL_DIR}/scripts/get_transcript.py "https://youtu.be/dQw4w9WgXcQ" --no-timestamps
 ```
 
 ## Supported URL Formats
@@ -102,7 +106,7 @@ Third line of the transcript
 
 ```bash
 # Fetch transcript
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/VIDEO_ID" --output video.txt
+python3 ${SKILL_DIR}/scripts/get_transcript.py "https://youtu.be/VIDEO_ID" --output video.txt
 
 # Now Claude can read and analyze the content
 ```
@@ -111,7 +115,7 @@ python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/VIDEO_I
 
 ```bash
 # Fetch all transcripts to one file
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py \
+python3 ${SKILL_DIR}/scripts/get_transcript.py \
   "https://youtu.be/VIDEO1" \
   "https://youtu.be/VIDEO2" \
   "https://youtu.be/VIDEO3" \
@@ -122,7 +126,7 @@ python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py \
 
 ```bash
 # Get clean text without timestamps for easier processing
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/VIDEO_ID" --no-timestamps > clean.txt
+python3 ${SKILL_DIR}/scripts/get_transcript.py "https://youtu.be/VIDEO_ID" --no-timestamps > clean.txt
 ```
 
 ## Troubleshooting
@@ -173,13 +177,13 @@ options:
 ### Get transcript for analysis
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://www.youtube.com/watch?v=tgbNymZ7vqY" --output talk.txt
+python3 ${SKILL_DIR}/scripts/get_transcript.py "https://www.youtube.com/watch?v=tgbNymZ7vqY" --output talk.txt
 ```
 
 ### Fetch clean text for summarization
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/VIDEO_ID" --no-timestamps > summary_input.txt
+python3 ${SKILL_DIR}/scripts/get_transcript.py "https://youtu.be/VIDEO_ID" --no-timestamps > summary_input.txt
 ```
 
 ### Batch process a playlist's videos
@@ -187,6 +191,6 @@ python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/VIDEO_I
 ```bash
 # Build URLs from a list of video IDs
 for vid in VIDEO_ID1 VIDEO_ID2 VIDEO_ID3; do
-  python ${CLAUDE_PLUGIN_ROOT}/scripts/get_transcript.py "https://youtu.be/${vid}" --output "transcript_${vid}.txt"
+  python3 ${SKILL_DIR}/scripts/get_transcript.py "https://youtu.be/${vid}" --output "transcript_${vid}.txt"
 done
 ```

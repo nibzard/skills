@@ -5,25 +5,29 @@ description: "Universal release workflow: detect project type, init versioning i
 
 # Release Runbook
 
+Resolve `SKILL_DIR` to the absolute directory containing this loaded `SKILL.md`.
+Use that path for bundled helpers; keep the target project as the working directory.
+
+
 A universal release workflow that adapts to any project type. Supports single-language projects (Python, Go, Node.js, Rust, Java, .NET, Ruby, PHP) and multi-language polyglot projects.
 
 ## Quick Start
 
 ```bash
 # Fully automated release with specific version
-~/.claude/skills/release-runbook/scripts/release.sh --version 1.2.3
+${SKILL_DIR}/scripts/release.sh --version 1.2.3
 
 # Interactive mode (prompts for version and type)
-~/.claude/skills/release-runbook/scripts/release.sh --interactive
+${SKILL_DIR}/scripts/release.sh --interactive
 
 # Dry run to see what would happen
-~/.claude/skills/release-runbook/scripts/release.sh --dry-run --version 1.2.3
+${SKILL_DIR}/scripts/release.sh --dry-run --version 1.2.3
 
 # Just detect project type and version files
-~/.claude/skills/release-runbook/scripts/detect-project.sh
+${SKILL_DIR}/scripts/detect-project.sh
 
 # Initialize versioning for a project that lacks it
-~/.claude/skills/release-runbook/scripts/init-versioning.sh --version 0.1.0
+${SKILL_DIR}/scripts/init-versioning.sh --version 0.1.0
 ```
 
 ## Preflight Checklist
@@ -50,7 +54,7 @@ The skill automatically detects:
 - **Package managers**: pip, npm, cargo, brew, etc.
 
 ```bash
-~/.claude/skills/release-runbook/scripts/detect-project.sh
+${SKILL_DIR}/scripts/detect-project.sh
 ```
 
 Outputs JSON-like:
@@ -67,7 +71,7 @@ BUILD_COMMAND=make build
 If the project has no versioning:
 
 ```bash
-~/.claude/skills/release-runbook/scripts/init-versioning.sh --version 0.1.0
+${SKILL_DIR}/scripts/init-versioning.sh --version 0.1.0
 ```
 
 This will:
@@ -212,7 +216,7 @@ Example (Curator: Python + Go):
 Override auto-detected tests:
 
 ```bash
-~/.claude/skills/release-runbook/scripts/release.sh \
+${SKILL_DIR}/scripts/release.sh \
   --test-command "make test-integration" \
   --version 1.2.3
 ```
@@ -240,7 +244,7 @@ For GPG signing:
 ```bash
 git config --local commit.gpgsign true
 git config --local tag.gpgsign true
-~/.claude/skills/release-runbook/scripts/release.sh --version 1.2.3
+${SKILL_DIR}/scripts/release.sh --version 1.2.3
 ```
 
 ## Troubleshooting
@@ -250,7 +254,7 @@ git config --local tag.gpgsign true
 Run tests manually first to debug:
 ```bash
 # Auto-detected test command
-~/.claude/skills/release-runbook/scripts/detect-project.sh | grep TEST_COMMAND
+${SKILL_DIR}/scripts/detect-project.sh | grep TEST_COMMAND
 
 # Run manually
 pytest  # or go test, npm test, etc.
@@ -268,7 +272,7 @@ gh auth login
 
 Manually specify or add to `project-types.md`:
 ```bash
-~/.claude/skills/release-runbook/scripts/release.sh \
+${SKILL_DIR}/scripts/release.sh \
   --version-file VERSION \
   --version 1.2.3
 ```
@@ -278,7 +282,7 @@ Manually specify or add to `project-types.md`:
 For complex projects, run release steps manually:
 ```bash
 # Detect project
-~/.claude/skills/release-runbook/scripts/detect-project.sh
+${SKILL_DIR}/scripts/detect-project.sh
 
 # Bump versions manually in all files
 
@@ -309,14 +313,14 @@ gh release create v1.2.3 --generate-notes
 ### Python Package
 
 ```bash
-$ ~/.claude/skills/release-runbook/scripts/detect-project.sh
-PROJECT_TYPE=python
-LANGUAGES=python
+$ ${SKILL_DIR}/scripts/detect-project.sh
+PROJECT_TYPE=python3
+LANGUAGES=python3
 VERSION_FILES=pyproject.toml
 TEST_COMMAND=pytest
-BUILD_COMMAND=python -m build
+BUILD_COMMAND=python3 -m build
 
-$ ~/.claude/skills/release-runbook/scripts/release.sh --version 2.0.0
+$ ${SKILL_DIR}/scripts/release.sh --version 2.0.0
 [✓] Detected Python project
 [✓] Tests passed
 [✓] Version bumped in pyproject.toml
@@ -328,14 +332,14 @@ $ ~/.claude/skills/release-runbook/scripts/release.sh --version 2.0.0
 ### Go CLI Tool
 
 ```bash
-$ ~/.claude/skills/release-runbook/scripts/detect-project.sh
+$ ${SKILL_DIR}/scripts/detect-project.sh
 PROJECT_TYPE=go
 LANGUAGES=go
 VERSION_FILES=VERSION
 TEST_COMMAND=go test ./...
 BUILD_COMMAND=go build
 
-$ ~/.claude/skills/release-runbook/scripts/release.sh --version 1.5.0
+$ ${SKILL_DIR}/scripts/release.sh --version 1.5.0
 [✓] Detected Go project
 [✓] Tests passed
 [✓] Version bumped in VERSION
@@ -357,14 +361,14 @@ gh release create v1.5.0 \
 ### Multi-Language (Python + Go)
 
 ```bash
-$ ~/.claude/skills/release-runbook/scripts/detect-project.sh
+$ ${SKILL_DIR}/scripts/detect-project.sh
 PROJECT_TYPE=multi
 LANGUAGES=python,go
 VERSION_FILES=pyproject.toml,VERSION,go.mod
 TEST_COMMAND=make test
 BUILD_COMMAND=make build
 
-$ ~/.claude/skills/release-runbook/scripts/release.sh --version 1.0.0
+$ ${SKILL_DIR}/scripts/release.sh --version 1.0.0
 [✓] Detected multi-language project (python, go)
 [✓] Tests passed (pytest, go test)
 [✓] Version bumped in pyproject.toml, VERSION

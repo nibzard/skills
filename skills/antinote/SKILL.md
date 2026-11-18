@@ -5,6 +5,10 @@ description: Send notes, task lists, summaries, and snippets to Antinote, a loca
 
 # Antinote
 
+Resolve `SKILL_DIR` to the absolute directory containing this loaded `SKILL.md`.
+Use that path for bundled helpers; keep the target project as the working directory.
+
+
 Push content to Antinote, a fast local macOS scratchpad for temporary notes and quick calculations. Antinote is built for short-lived notes, not a permanent store, so reach for it when the user wants something to glance at and discard: a task list for the day, a summary to act on now, a snippet to paste, a quick calculation.
 
 ## When to use
@@ -31,7 +35,7 @@ Append, overwrite, and pin act on the note that is currently open, so Antinote s
 The bundled script handles percent-encoding (required for multiline content) and the macOS and install guards. Path, relative to a standard skill install:
 
 ```bash
-S=~/.claude/skills/antinote/scripts/antinote.sh
+S=${SKILL_DIR}/scripts/antinote.sh
 
 # Create a new note from a string (also the default action)
 $S create "Ship MCP v2 this week"

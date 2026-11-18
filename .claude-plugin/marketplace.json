@@ -48,7 +48,10 @@
         "data-science",
         "interactive"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "claude-thread-publisher",
@@ -80,7 +83,10 @@
         "github",
         "productivity"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "brand-illustrator",
@@ -112,7 +118,10 @@
         "builder-methods",
         "productivity"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "marp-slide-quality",
@@ -142,7 +151,10 @@
         "quality",
         "analysis"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "pentest-toolkit",
@@ -172,7 +184,10 @@
         "assessment",
         "authorized-testing"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "skill-creator",
@@ -201,7 +216,10 @@
         "templates",
         "generator"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "release-runbook",
@@ -229,7 +247,10 @@
         "publishing",
         "devops"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "tmux",
@@ -261,7 +282,10 @@
         "terminal",
         "automation"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "yt-transcript",
@@ -293,7 +317,10 @@
         "analysis",
         "productivity"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "steel-org-recon",
@@ -324,7 +351,10 @@
         "logs",
         "data-science"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     },
     {
       "name": "antinote",
@@ -356,7 +386,10 @@
         "productivity",
         "quick-capture"
       ],
-      "strict": true
+      "strict": true,
+      "skills": [
+        "."
+      ]
     }
   ]
 }
