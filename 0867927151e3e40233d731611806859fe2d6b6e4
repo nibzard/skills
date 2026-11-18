@@ -1,0 +1,21 @@
+# Context
+
+## Background
+Outcome of the 2026-11-18 skills review (learnings.md,
+notes/2026-11-18-skills-review.md). The kit had grown eight
+duplicated skills/<name>/skills/<name>/ entry-point trees; five
+had drifted from their top-level copies, so installs could load
+whichever copy the resolver picked.
+
+## Why This Way
+Root-level SKILL.md is the documented single entry point, so the
+nested trees were deleted rather than re-synced. Skill bodies now
+resolve ${SKILL_DIR} at load time instead of relying on
+${CLAUDE_PLUGIN_ROOT}, which does not survive the flattened
+layout for standalone installs.
+
+## Gotchas
+- pi-gondolin-experiments (added in db8e11e) was already flat, so
+  it needed no changes here.
+- marketplace.json edits only add "skills": ["."]; the catalog
+  itself stays deprecated per CONTRIBUTING.md.
