@@ -1,0 +1,14 @@
+# Context
+
+## Background
+Skill copied verbatim from nibzard/oakspec at
+.agents/skills/pi-gondolin-experiments/ (uncommitted there as of
+2026-11-18). Oakspec is the authoring home; this repo distributes
+it as part of the kit.
+
+## Why This Way
+marketplace.json was deliberately not updated: CONTRIBUTING.md
+deprecates marketplace mode, and that file also carries unrelated
+in-progress edits that must not ride along in this commit.
+A .claude-plugin/plugin.json was added to match the layout of
+every other skill in the kit.
