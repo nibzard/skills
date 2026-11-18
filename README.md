@@ -43,6 +43,7 @@ Not a marketplace—a toolkit. These are skills I've built and curated for my ow
 |-------|--------------|
 | **[release-runbook](skills/release-runbook/)** | Universal release workflow: detect project type, test, bump, tag, push |
 | **[skill-creator](skills/skill-creator/)** | Create new Agent Skills from templates or interactively |
+| **[pi-gondolin-experiments](skills/pi-gondolin-experiments/)** | Run controlled agent experiments with Pi on the host and Gondolin VM guests: trials, candidate comparisons, and hill climbing with saved evidence |
 
 ### Security
 | Skill | What it does |

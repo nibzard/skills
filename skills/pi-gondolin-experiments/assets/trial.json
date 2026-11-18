@@ -1,0 +1,14 @@
+{
+  "source": "/absolute/experiment/input",
+  "prompt": "Perform the task defined for this trial.",
+  "timeout_seconds": 240,
+  "agent_command": [
+    "/absolute/tools/node_modules/.bin/pi",
+    "-p", "--mode", "json", "--no-session",
+    "--no-extensions", "--no-mcp", "--no-skills",
+    "--no-prompt-templates", "--no-context-files",
+    "--provider", "zai", "--model", "glm-5.3", "--thinking", "low",
+    "-e", "/absolute/tools/gondolin.ts", "{prompt}"
+  ],
+  "evaluate_command": ["python3", "/absolute/experiment/evaluate.py", "{project}"]
+}

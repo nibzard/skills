@@ -1,0 +1,14 @@
+{
+  "name": "pi-gondolin-experiments",
+  "version": "1.0.0",
+  "description": "Run controlled experiments or iterative improvement trials with unattended Pi and Gondolin guest tools. Use for fresh trials, agent handoffs, candidate comparisons, or hill climbing with saved evidence.",
+  "homepage": "https://github.com/nibzard/skills",
+  "license": "MIT",
+  "author": {
+    "name": "nibzard",
+    "email": "nibzard@github.com"
+  },
+  "skills": [
+    "."
+  ]
+}
